@@ -293,9 +293,80 @@ function Testimonial() {
 }
 
 // ─────────────────────────────────────────────────────────
-// How it works — 3 steps
+// How it works — 4 steps, vertical timeline
 // ─────────────────────────────────────────────────────────
-function HowItWorks() { return null; }
+function HowItWorks() {
+  const STEPS = [
+    {
+      title: 'Apply',
+      body: 'Tell us about you and your music. Takes about 5 minutes.',
+    },
+    {
+      title: 'We review',
+      body: 'A real person reads every application. You hear back within 48 hours, either way.',
+    },
+    {
+      title: "You're in",
+      body: 'Approved artists are charged $10/month and get the dashboard, distribution, and the team.',
+    },
+    {
+      title: 'We help you release',
+      body: 'Distribute to 250+ platforms, pitch for placements, get on stages — every release.',
+    },
+  ];
+
+  return (
+    <section style={{ padding: '80px 20px' }}>
+      <div className="eyebrow" style={{ color: 'var(--caption)', marginBottom: 16 }}>How it works</div>
+      <h2 className="display" style={{ fontSize: 76, lineHeight: 0.85, marginBottom: 44 }}>
+        APPLY TO<br /><span style={{ color: 'var(--accent)' }}>RELEASE.</span>
+      </h2>
+      <div style={{ position: 'relative' }}>
+        {/* Connecting line */}
+        <div style={{
+          position: 'absolute', left: 19, top: 20, bottom: 20,
+          width: 2, background: 'rgba(0,227,135,0.25)',
+        }} />
+        {STEPS.map((s, i) => (
+          <div key={i} style={{
+            display: 'flex', gap: 20, alignItems: 'flex-start',
+            marginBottom: i === STEPS.length - 1 ? 0 : 32,
+            position: 'relative',
+          }}>
+            <div style={{
+              width: 40, height: 40, borderRadius: '50%',
+              background: 'var(--bg)',
+              border: '2px solid var(--accent)',
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              fontFamily: 'var(--display)', fontWeight: 800,
+              fontSize: 18, color: 'var(--accent)',
+              flexShrink: 0, position: 'relative', zIndex: 1,
+            }}>{i + 1}</div>
+            <div style={{ flex: 1, paddingTop: 4 }}>
+              <div style={{
+                fontFamily: 'var(--display)', fontWeight: 700,
+                fontSize: 26, lineHeight: 1, marginBottom: 10,
+                textTransform: 'uppercase',
+              }}>{s.title}</div>
+              <div style={{
+                fontSize: 16, lineHeight: 1.5,
+                color: 'rgba(255,255,255,0.78)',
+              }}>{s.body}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* CTA */}
+      <div style={{ marginTop: 40 }}>
+        <button className="btn btn-primary btn-full">
+          Apply Now
+          <span className="arrow"><window.ArrowRight /></span>
+        </button>
+      </div>
+    </section>
+  );
+}
 
 // ─────────────────────────────────────────────────────────
 // FAQ
