@@ -108,7 +108,7 @@ function ArtistCardCircle({ name, img, blurb }) {
         <div style={{ flex: 1, minWidth: 0 }}>
           <ArtistName name={name} size={32} marginBottom={6} />
           <p style={{
-            fontSize: 14, color: 'rgba(255,255,255,0.78)', lineHeight: 1.45, margin: 0,
+            fontSize: 15, color: 'rgba(255,255,255,0.78)', lineHeight: 1.45, margin: 0,
             display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical',
             overflow: 'hidden'
           }}>

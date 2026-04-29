@@ -44,16 +44,16 @@ function WhatYouGet() {
 // Centered layout: eyebrow → big display title → body copy.
 function WhatYouGetCards() {
   const cards = [
-    { eyebrow: 'Reach',     title: '250+ DSPs',                        copy: 'More platforms. More reach. More ways for the world to find you.' },
-    { eyebrow: 'Royalty',   title: '90% Artist\nRoyalty Payout',       copy: 'Keep 90% of your royalties. Own your masters. Always.' },
-    { eyebrow: 'Support',   title: 'Full Customer\nSupport',           copy: 'Real humans, real answers. Our team has your back 7 days a week so you can focus on the music, not the problems.' },
-    { eyebrow: 'Insight',   title: 'Analytics',                        copy: 'Real-time dashboard. Every stream, every market, every move, tracked and actionable.' },
+    { eyebrow: 'Reach',     title: '250+ DSPs',                        copy: 'More platforms. More reach.\nMore ways for the world to find you.' },
+    { eyebrow: 'Royalty',   title: '90% Artist\nRoyalty Payout',       copy: 'Keep 90% of your royalties.\nOwn your masters. Always.' },
+    { eyebrow: 'Support',   title: 'Full Customer\nSupport',           copy: 'Real humans, real answers.\nOur team has your back 7 days a week so you can focus on the music, not the problems.' },
+    { eyebrow: 'Insight',   title: 'Analytics',                        copy: 'Real-time dashboard.\nEvery stream, every market, every move, tracked and actionable.' },
   ];
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
       {cards.map((c, i) => (
-        <div key={i} style={{
+        <div key={i} className="card-stagger" style={{
           background: 'linear-gradient(180deg, #1a1255, #0e0838)',
           border: '2px solid rgba(0,227,135,0.3)',
           borderRadius: 24,
@@ -63,15 +63,16 @@ function WhatYouGetCards() {
           overflow: 'hidden',
         }}>
           {/* Soft accent glow — alternates corner per card for subtle rhythm */}
-          <div style={{
+          <div className="glow-drift" style={{
             position: 'absolute',
             top: i % 2 === 0 ? -40 : 'auto',
             bottom: i % 2 === 0 ? 'auto' : -40,
             right: i % 2 === 0 ? -40 : 'auto',
             left: i % 2 === 0 ? 'auto' : -40,
             width: 160, height: 160, borderRadius: '50%',
-            background: 'radial-gradient(circle, rgba(0,227,135,0.18), transparent 70%)',
+            background: 'radial-gradient(circle, rgba(0,227,135,0.22), transparent 70%)',
             pointerEvents: 'none',
+            animationDelay: `${i * 1.4}s`,
           }} />
           <div style={{ position: 'relative' }}>
             <div style={{
@@ -86,6 +87,7 @@ function WhatYouGetCards() {
             <p style={{
               color: '#9eb5ff', fontSize: 16, lineHeight: 1.5, margin: 0,
               maxWidth: 280, marginLeft: 'auto', marginRight: 'auto',
+              whiteSpace: 'pre-line',
             }}>{c.copy}</p>
           </div>
         </div>
@@ -357,14 +359,22 @@ function RevoltEcosystem() {
             paddingBottom: 20,
             borderBottom: i === BRANDS.length - 1 ? 'none' : '1px solid var(--hairline-soft)',
           }}>
-            <img
-              src={b.logo}
-              alt={b.label + ' logo'}
-              style={{
-                width: 64, height: 64, borderRadius: '50%', flexShrink: 0,
-                display: 'block',
-              }}
-            />
+            <div style={{
+              width: 76, height: 76, borderRadius: '50%',
+              border: '1px solid rgba(0,227,135,0.18)',
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              flexShrink: 0,
+            }}>
+              <img
+                src={b.logo}
+                alt={b.label + ' logo'}
+                style={{
+                  width: 64, height: 64, borderRadius: '50%',
+                  objectFit: 'contain',
+                  display: 'block',
+                }}
+              />
+            </div>
             <div style={{ flex: 1, paddingTop: 4 }}>
               <div style={{
                 fontFamily: 'var(--display)', fontWeight: 700,

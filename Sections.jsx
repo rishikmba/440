@@ -52,7 +52,7 @@ function Hero() {
   const h = {
     eyebrow: 'POWERED BY REVOLT',
     title: null, // rendered as JSX below
-    subtitle: '440 is a music distributor for independent artists. Real humans, real placements, real reach.',
+    subtitle: 'Music distribution for independent artists. Real humans, real placements, real reach.',
     cta: 'Apply Now',
   };
 
