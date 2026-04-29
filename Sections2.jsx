@@ -389,6 +389,20 @@ function RevoltEcosystem() {
           </div>
         ))}
       </div>
+
+      {/* Inline CTA — payoff after the ecosystem reveal */}
+      <div style={{ marginTop: 40, textAlign: 'center' }}>
+        <p className="body" style={{
+          fontSize: 20, lineHeight: 1.35, marginBottom: 18,
+          color: 'rgba(255,255,255,0.92)', fontWeight: 600,
+        }}>
+          Get plugged into all of it.
+        </p>
+        <button className="btn btn-primary btn-full">
+          Apply Now
+          <span className="arrow"><window.ArrowRight /></span>
+        </button>
+      </div>
     </section>
   );
 }

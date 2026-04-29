@@ -405,11 +405,11 @@ function FAQ() {
 function FinalCTA() {
   return (
     <section style={{ padding: '80px 20px', position: 'relative' }}>
-      <h2 className="display" style={{ fontSize: 76, lineHeight: 0.85, marginBottom: 22 }}>
-        READY TO<br /><span style={{ color: 'var(--accent)' }}>OWN IT?</span>
+      <h2 className="display" style={{ fontSize: 72, lineHeight: 0.85, marginBottom: 22 }}>
+        READY TO<br /><span style={{ color: 'var(--accent)' }}>GET STARTED?</span>
       </h2>
-      <p className="body" style={{ color: 'rgba(255,255,255,0.72)', marginBottom: 28 }}>
-        Apply in 5 minutes. Approval in 48 hours.
+      <p className="body" style={{ color: 'rgba(255,255,255,0.78)', marginBottom: 28, fontSize: 18, lineHeight: 1.45 }}>
+        We read every application. If we think 440 is a fit, you'll hear from a real person within 48 hours.
       </p>
       <button className="btn btn-primary btn-full">
         Apply Now
