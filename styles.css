@@ -1,3 +1,18 @@
+@font-face {
+  font-family: "Mango Grotesque";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/fonts/MangoGrotesque-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Mango Grotesque";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("assets/fonts/MangoGrotesque-ExtraBold.woff2") format("woff2");
+}
+
 /* 440 brand tokens */
 :root {
   --bg: rgb(7, 0, 56);
